@@ -1,10 +1,18 @@
 <h1>Coordinates Lookup</h1>
 
+<form action=":address">
+  <label for="form1">Address</label>
+  <input type="text" id="form1" name="address" placeholder="Enter Address">
+  <button>Submit</button>
+</form>
+
 <dl>
   <dt>Address:</dt>
   <dd><%= @address %></dd>
 
+
   <dt>URL Safe Address:</dt>
+   <dt><%= if @url_safe_address > .nil %></dt>
   <dd><%= @url_safe_address %></dd>
 
   <dt>Latitude:</dt>
@@ -12,4 +20,7 @@
 
   <dt>Longitude:</dt>
   <dd><%= @longitude %></dd>
+
+  <dt>Other:</dt>
+  <dd><%= @other ["Please_fill_out_form"] %></dd>
 </dl>
